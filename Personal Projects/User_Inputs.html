@@ -1,0 +1,180 @@
+<!--Declarations-->
+<!DOCTYPE html>
+<html lang="en-us"> <!--Language-->
+<head>
+    <meta charset="UTF-8"> <!--Character-->
+    <link rel="icon" type="image/x-icon" href="favicon.png"> <!--Favicon-->
+    <link rel="stylesheet" href="C:\Users\cman-\OneDrive\Documents\Personal Projects\Navstyle.css"> <!--External CSS Navigation Bar-->
+    <title>User Inputs</title> <!--Title-->
+    <!--Internal CSS-->
+    <style>
+        input{
+            width: 250px; /*width of text box*/
+            padding: 4px 10px; /*space inside of text box*/
+            margin: 8px 0;/*space btwn text box and element above*/
+            box-sizing: border-box; /*makes padding and other elements in the overall size calc*/
+            border: 3px solid #ccc;
+            border-radius: 4px;
+            outline: none; /*ensures browser doesnt add its own outline when object is focused*/
+            transition: .5s; /*prepares for custom outline*/
+            -webkit-transition: .5s;
+        }
+        input:focus{
+            width: 50%; /*makes input boxes wider when in focus*/
+            border: 3px solid #555; /*outline for when text is in focus*/
+        }
+        #search{    
+            width: 60%; /*width of search box*/
+        }
+        #search:focus{/*Disabled right now*/
+            width: 100%; /*width of search box when in focus*/
+        }
+        /*Creates tooltip for search box*/
+        .search{
+            position: relative;
+            display: inline-block;
+            cursor: not-allowed;
+        }
+        .search .searchtip{
+            visibility: hidden; /*hides tooltip*/
+            width: auto;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 4px;
+            padding: 5px 0;
+
+            position: absolute; /*positions tooltip*/
+            z-index: 1; /*Can not be 1 since Nav Bar must be 1*/
+            top: 15%; /*Positions tooltip*/
+        }
+        .search:hover .searchtip{
+            visibility: visible; /*reveals tool tip*/
+        }
+        input[type="radio"], input[type="checkbox"], input[type="file"]{
+            width:auto; /*Restricts size of buttons*/
+            border: none; /*Removes border from input file*/
+        }
+        input[type="reset"], input[type="button"]{
+            width:auto; /*Restricts size of buttons*/
+            background-color: #555; /*Styles buttons*/
+            border: 3px solid #555;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h2>User Inputs</h2>
+
+    <!--Navigation Bar-->
+    <ul>
+        <li><a href="C:\Users\cman-\OneDrive\Documents\Personal Projects\Vertical_NavBar.html">Vertical</a></li>
+        <li><a href="C:\Users\cman-\OneDrive\Documents\Personal Projects\Horizontal_NavBar.html">Horizontal</a></li>
+        <li><a href="C:\Users\cman-\OneDrive\Documents\Personal Projects\Table_Website_Demo.html">Table</a></li>
+        <li><a href="C:\Users\cman-\OneDrive\Documents\Personal Projects\Basic_Website_Demo1.html">Basic</a></li>
+        <li><a class="active" href="C:\Users\cman-\OneDrive\Documents\Personal Projects\User_Inputs.html">User Inputs</a></li>
+    </ul>
+
+    <!--Start with basic text Inputs-->
+
+    <!--Search Bar-->
+    <div class="search">
+    <span class="searchtip">I do not work yet!</span> <!--Tooltip text-->
+    <form autocomplete="off">
+        <input type="text" id="search" name="search" placeholder="Search . . ." disabled> <!--disabled textbox-->
+    </form>
+    </div>
+
+    <!--Name-->
+    <div class="names">
+    <form autocomplete="off">
+        <label for="fname">First Name</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last Name</label><br>
+        <input type="text" id="lname" name="lname">
+    </form>
+    </div>
+    
+    <!--Date-->
+    <div class="Date">
+    <form autocomplete="off">
+        <label for="bday">Birthday</label><br>
+        <input type="date" id="bday" name="bday">
+    </form>
+    </div>
+    
+    <!--Username and Password-->
+    <div class="user">
+    <form autocomplete="off">
+        <label for="user">Username</label><br>
+        <input type="text" id="user" name="user"><br>
+    </form>
+    </div>
+    <div class="pwd">
+    <form autocomplete="off">
+        <label for="pwd">Password</label><br>
+        <input type="password" id="pwd" name="pwd"><br>
+    </form>
+    </div>
+
+    <!--Email and Phone Number-->
+    <div class="email">
+    <form autocomplete="on">
+        <label for="email">Enter Your Email</label><br>
+        <input type="email" id="email" name="email"><br>
+    </form>
+    </div>
+    <div class="number">
+    <form autocomplete="off">
+        <label for="phone">Enter Your Phone Number</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="(123)-456-7890"><br>
+    </form>
+    </div>
+
+    <!--Radio Buttons-->
+    <p>What is your favorite coding language?</p>
+    <div class="radio">
+    <form>
+        <input type="radio" id="opt1" name="fav_lang" value="Python">
+        <label for="opt1">Python</label><br>
+        <input type="radio" id="opt2" name="fav_lang" value="C++">
+        <label for="opt2">C++</label><br>
+        <input type="radio" id="opt3" name="fav_lang" value="Html">
+        <label for="opt3">Html</label><br>
+        <input type="reset" value="Reset"> <!--Creates a reset button-->
+    </form>
+    </div>
+
+    <!--Checklist-->
+    <p>What coding languages do you know?</p>
+    <div class="checkbox">
+    <form>
+        <input type="checkbox" id="opt1C" name="opt1C" value="PythonCL">
+        <label for="opt1C">Python</label><br>
+        <input type="checkbox" id="opt2C" name="opt2C" value="C++CL">
+        <label for="opt2C">C++</label><br>
+        <input type="checkbox" id="opt3C" name="opt3C" value="HtmlCL">
+        <label for="opt3C">Html</label><br>
+        <input type="reset" value="Reset"> <!--Creates a reset button-->
+    </form>
+    </div>
+
+    <!--File upload-->
+    <p>Please upload a picture.</p>
+    <div class="file">
+    <form>
+        <label for="file">Select a file:</label>
+        <input type="file" id="file" name="file"><br>
+        <input type="reset" value="Clear"> <!--Creates a reset button-->
+    </form>
+    </div>
+
+    <!--Button-->
+    <p>Click the button for a surprise!</p>
+    <div class="button">
+    <form>
+        <input type="button" onclick="alert('Welcome to my website!')" value="Click Here!">
+    </form>
+    </div>
+</body>
+</html>

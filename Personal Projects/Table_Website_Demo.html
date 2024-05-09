@@ -1,0 +1,85 @@
+<!--Declarations-->
+<!DOCTYPE html>
+<html lang="en-us"> <!--Language Encoding-->
+<head>
+    <meta charset="UTF-8"> <!--Character Encoding-->
+    <title>Table Website Design</title> <!--Page title-->
+    <link rel="icon" type="image/x-icon" href="favicon.png"> <!--Favicon-->
+    <!--Introducing Internal CSS-->
+    <style>
+        body{background-color: powderblue;}
+        h1{
+            color: #555;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+        p{
+            color: #555;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: lighter;
+            font-size: large;
+        }
+        table{
+            border-collapse: collapse;
+            width: 100%;
+            background-color: aliceblue;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        th, td{
+            border: 1px solid #ddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(odd){
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+<h1>On this webpage I will create a basic table.</h1>
+
+<!--Define the table-->
+<table style="width: auto;">
+    <tr>
+        <th>Rank</th>
+        <th>Person</th>
+        <th>State</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Charlie</td>
+        <td>Alabama</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>John</td>
+        <td>Kansas</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Seth</td>
+        <td>Wyoming</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Jane</td>
+        <td>California</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Jennifer</td>
+        <td>Michgain</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Kelly</td>
+        <td>Texas</td>
+    </tr>
+</table>
+<p>On this webpage I used basic CSS to stylize the table!</p>
+<p>Below are iframes of previous websites I built!</p>
+<iframe src="Basic_Website_Demo1.html" style="border: none; width: 50%; height: 50%; background-color: white;" title="Link to Basic_Website_Demo1"></iframe>
+<iframe src="Horizontal_NavBar.html" style="border: none; width: 50%; height: 50%;" title="Link to Horizontal_NavBar"></iframe>
+</body>
+</html>

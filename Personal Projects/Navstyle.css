@@ -1,0 +1,30 @@
+ul{ /*Controls background for Nav Bar*/
+    list-style-type: none; /*Removes bulletpoints*/
+    margin: 0; 
+    padding: 0;
+    overflow: hidden; /*Keeps from text from overflowing*/
+    background-color: #f1f1f1;
+    position: sticky; /*Makes Nav Bar stick to top of screen once scrolled to*/
+    position: -webkit-sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+li{
+    float:left; /*Makes Nav Bar Horizontal*/
+}
+li a{ /*Controls individual blocks for Nav Bar*/
+    display: block; /*Makes Nav Bar into blocks*/
+    text-align: center; /*Centers text*/
+    padding: 14px 6px;
+    text-decoration: none; /*Removes hyperlink decoration*/
+    color: #000;
+}
+li a.active{ /*Current Page Control*/
+    background-color: purple;
+    color: white;
+}
+li a:hover:not(.active){ /*Other Pages*/
+    background-color: #555;
+    color: white;
+}

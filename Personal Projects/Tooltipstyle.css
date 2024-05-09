@@ -1,0 +1,22 @@
+/*Creates tooltip for search box*/
+.tooltip{
+    position: relative;
+    display: inline-block;
+    cursor: not-allowed;
+}
+.tooltip .tooltiptext{
+    visibility: hidden; /*hides tooltip*/
+    width: auto;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px 0;
+
+    position: absolute; /*positions tooltip*/
+    z-index: 1; /*Can not be 1 since Nav Bar must be 1*/
+    top: 15%; /*Positions tooltip*/
+}
+.tooltip:hover .tooltiptext{
+    visibility: visible; /*reveals tool tip*/
+}

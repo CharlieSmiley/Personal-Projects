@@ -1,0 +1,51 @@
+<!--Declarations-->
+<!DOCTYPE html>
+<html lang="en-us"> <!--Language-->
+<head>
+    <meta charset="UTF-8"> <!--Character-->
+    <title>Horizontal Nav Bar Example</title> <!--Title-->
+    <link rel="icon" type="image/x-icon" href="favicon.png"> <!--Favicon-->
+    <!--Internal CSS-->
+    <style>
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            width: 100%;
+        }
+        li{
+            float:left;
+        }
+        li a{
+            display: block;
+            text-align: center;
+            padding: 14px 6px;
+            text-decoration: none;
+            color: #000;
+        }
+        li a.active{
+            background-color: purple;
+            color: white;
+        }
+        li a:hover:not(.active){
+            background-color: #555;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Horizontal Navigation Bars</h2>
+    <ul>
+        <li><a href="C:\Users\cman-\OneDrive\Documents\Personal Projects\Vertical_NavBar.html">Vertical</a></li>
+        <li><a class="active" href="C:\Users\cman-\OneDrive\Documents\Personal Projects\Horizontal_NavBar.html">Horizontal</a></li>
+        <li><a href="C:\Users\cman-\OneDrive\Documents\Personal Projects\Table_Website_Demo.html">Table</a></li>
+        <li><a href="C:\Users\cman-\OneDrive\Documents\Personal Projects\Basic_Website_Demo1.html">Basic</a></li>
+        <li><a href="C:\Users\cman-\OneDrive\Documents\Personal Projects\User_Inputs.html">User Inputs</a></li>
+    </ul>
+</body>
+</html>
